@@ -1,19 +1,18 @@
 package cmd
 
 import (
-	"fmt"
-
+	"github.com/bjornnorgaard/argus/tools/github/dependabot"
 	"github.com/spf13/cobra"
 )
 
 // dependabotCmd represents the dependabot command
 var dependabotCmd = &cobra.Command{
 	Use:     "dependabot",
-	Aliases: []string{"bot"},
+	Aliases: []string{"bot", "db"},
 	Short:   "Handles dependabot pull requests",
 	Long:    "Approves pull requests by dependabot that are passing status checks.",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("dependabot called")
+		dependabot.Run()
 	},
 }
 

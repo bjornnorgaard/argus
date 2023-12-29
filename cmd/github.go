@@ -1,7 +1,7 @@
 package cmd
 
 import (
-	"fmt"
+	"github.com/bjornnorgaard/argus/tools/github"
 
 	"github.com/spf13/cobra"
 )
@@ -13,7 +13,7 @@ var githubCmd = &cobra.Command{
 	Short:   "Uses GitHub CLI to interact with repos",
 	Long:    "Use one of the nested commands to actually do something",
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("github called")
+		github.Run()
 	},
 }
 
