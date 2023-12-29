@@ -2,16 +2,29 @@
 Collection of various tools bundled in a CLI.
 
 # Environment setup
+https://github.com/spf13/cobra
 
 ```sh
-# https://github.com/spf13/cobra
 go install github.com/spf13/cobra-cli@latest
 ```
 
-# Cobra generator
+## Cobra generator
 https://github.com/spf13/cobra-cli/blob/main/README.md
 
+## Setup project in current directory
+
 ```sh
-# Setup project in current directory
 cobra-cli init . argus
+```
+
+## New command
+
+```sh
+cobra-cli add github
+```
+
+## Add a nested command
+
+```sh
+cobra-cli add dependabot -p 'github'
 ```
